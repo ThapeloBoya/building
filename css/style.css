@@ -156,9 +156,6 @@ display: none;
 /* ========================= */
 /*        SECTIONS           */
 /* ========================= */
-section {
-  padding: 3rem 1rem;
-}
 
 .container {
   max-width: 1100px;
@@ -229,10 +226,12 @@ h2::after {
 /*        TEXT COLUMNS       */
 /* ========================= */
 .member-benefits,
-.institute-section {
-  padding: 60px 20px;
+.institute-section, .about, .membership-section {
+  padding: 60px 20px 0 20px;
 
 }
+
+
 .membership-section{
   width:70%
 }
@@ -242,7 +241,7 @@ h2::after {
 .text-column ul li{
   color:#a9a9a9
 }
-.institute-section, .expected-outcomes{
+.institute-section{
   margin-top:-60px
 }
 .institute-section h2, .expected-outcomes h2{
@@ -284,7 +283,8 @@ h2::after {
 
 /* Image columns */
 .image-column,
-.image-columns {
+.image-columns,
+.image-columnss {
   flex: 1;
   min-width: 300px;
   border-radius: 12px;
@@ -299,7 +299,9 @@ h2::after {
 .image-columns {
   background-image: url('../images/member2.webp');
 }
-
+.image-columnss {
+  background-image: url('../images/member5.webp');
+}
 /* ========================= */
 /*          FOOTER           */
 /* ========================= */
@@ -690,13 +692,19 @@ text-align: center;
     list-style-type: none;
     color:#a9a9a9;
   }
-  .costofweekness, .member-benefitss{
+  .costofweekness{
     margin-top: -70px;
   }
-  .institute-section,  .expected-outcomes{
+  .benefits-columns{
+    margin-top: 20px!important;
+  }
+.member-benefits{
+  margin-top: -70px;
+}
+  .institute-section{
     margin-top: -80px;
   }
-  .programme{
+  .programme, .expected-outcomes{
     margin-top: -40px;
   }
  .cicle2{
@@ -751,6 +759,11 @@ text-align: center;
   .institute-section,  .expected-outcomes{
     margin-top: -50px;
   }
+  .why-align {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
   .programme{
     margin-top: -40px;
   }
@@ -875,4 +888,20 @@ nav {
   color:#a9a9a9;
   padding:1rem 0 3rem 0;
   text-align: center;
+}
+
+
+
+/* Reusable fade-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
